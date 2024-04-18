@@ -1,0 +1,190 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+/* Add this CSS code to your main CSS file or within a <style> tag in the <head> section */
+#preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    /* Black background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.loader {
+    border: 5px solid #f3f3f3;
+    /* Light grey */
+    border-top: 5px solid #3498db;
+    /* Blue */
+    border-right: 5px solid #e74c3c;
+    /* Red */
+    border-bottom: 5px solid #f1c40f;
+    /* Yellow */
+    border-left: 5px solid #2ecc71;
+    /* Green */
+    border-radius: 50%;
+    width: 50px;
+    margin-top: 60px;
+    height: 50px;
+    animation: spin 10s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* Add your CSS styles here */
+
+.navbar {
+    display: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    background-color: #333;
+    overflow: hidden;
+    z-index: 1;
+    /* Make sure navbar is above other content */
+}
+
+.navbar a {
+    float: left;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+.navbar a:hover {
+    background-color: #ddd;
+    color: rgb(250, 247, 247);
+}
+
+.nav-icon {
+    position: fixed;
+    top: 0;
+    right: 0;
+    background-color: #b6adad;
+    padding: 14px 16px;
+    cursor: pointer;
+    z-index: 2;
+    /* Make sure icon is above the navbar */
+}
+
+
+@media screen and (max-width: 600px) {
+    .navbar a {
+        float: none;
+        display: block;
+        text-align: left;
+    }
+}
+
+/* Style for Personal Details */
+.personal-details {
+    position: relative;
+    overflow: hidden;
+    height: 50px;
+    /* Adjust based on content */
+    color: #fff;
+    background: #333;
+    /* Dark background for contrast */
+}
+
+.detail {
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    /* Initial position off-screen */
+    transform: translateX(-100%);
+    /* Animation */
+    animation: slide-in-out 10s ease-in-out infinite;
+}
+
+/* Keyframes for to-and-fro sliding animation */
+@keyframes slide-in-out {
+
+    0%,
+    100% {
+        transform: translateX(-100%);
+    }
+
+    25%,
+    75% {
+        transform: translateX(0);
+    }
+}
+
+/* Delay each detail's animation to create a sequence */
+#detail1 {
+    animation-delay: 0s;
+}
+
+#detail2 {
+    animation-delay: 3.33s;
+    /* One third of the animation duration */
+}
+
+#detail3 {
+    animation-delay: 6.66s;
+    /* Two thirds of the animation duration */
+}
+
+/* Footer CSS */
+
+/* Styles already inline in the HTML for background and text color */
+/* Footer Social Media Icons CSS */
+.fa {
+    padding: 20px;
+    font-size: 30px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+    border-radius: 50%;
+}
+
+/* Add a hover effect if you want */
+.fa:hover {
+    opacity: 0.7;
+}
+
+/* Set a specific color for each brand */
+.fa-envelope {
+    background: #3B5998;
+    color: white;
+}
+
+.fa-github {
+    background: #333333;
+    color: white;
+}
+
+.fa-linkedin {
+    background: #007bb5;
+    color: white;
+}
+
+.fa-dev {
+    background: #f06529;
+    color: white;
+}
+
+.fa-twitter {
+    background: #55ACEE;
+    color: white;
+}
